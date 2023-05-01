@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <!-- Site made with Mobirise Website Builder v4.7.2, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.7.2, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo4.png" type="image/x-icon">
+  <meta name="description" content="
+">
+  <title>Make Bootable</title>
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+</head>
+<body>
+  <section class="mbr-section article content1 cid-tCJHaxxARD" id="content1-32">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-4">| <a href="index.html">Home</a> | Make Bootable | <a href="privacypolicy.html">Privacy Policy</a> | <a href="termsofuse.html">Terms of Use</a> | <a href="references.html">References</a> |</div>
+        </div>
+    </div>
+</section>
+
+<section class="engine"><a href="https://mobirise.me/w">html5 templates</a></section><section class="mbr-section content4 cid-tCQaI1WqMm" id="content4-3w">
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="title col-12 col-md-8">
+                
+                <h3 class="mbr-section-subtitle align-center mbr-light mbr-fonts-style display-5">Bootable Lion from Install Mac OS X Lion.app&nbsp;</h3>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCPto4kSpv" id="content1-3k">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7"><p><span style="font-size: 1rem;">Enter the command below to attach the </span><em>“InstallESD.dmg”</em><span style="font-size: 1rem;"> disk image file as a device.&nbsp;</span><span style="font-size: 1rem;">This will automatically mount the volume </span><em>“Mac OS X Install ESD”</em><span style="font-size: 1rem;"> stored in this&nbsp;</span><span style="font-size: 1rem;">disk image file.</span><br></p></div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCPtpmD7Ru" id="content1-3l">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-2">hdiutil attach "/Applications/Install Mac OS X Lion.app/Contents/SharedSupport/InstallESD.dmg"</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCPtpBYWhf" id="content1-3m">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">Enter the command below to clone the source volume <em>“Mac OS X Install ESD”</em>. If prompted for a password, type your administrator password. Terminal doesn't show any characters as you type. Then press Return. When prompted to erase contents, type Y to confirm that you want to erase the volume, then press Return. The cloned volume should be named <em>“Mac OS X Install ESD 1”</em>.</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCPuG3Vmjh" id="content1-3o">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-2">sudo asr restore --source "/Volumes/Mac OS X Install ESD" --target "/Volumes/MyVolume" --erase</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCPwJ6RLoL" id="content1-3t">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7"><p><span style="font-size: 1rem;">Enter the command below to unmount the source volume </span><em>“Mac OS X Install ESD”</em><span style="font-size: 1rem;"> and then eject the device containing this volume.</span><br></p></div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCPuGfozRb" id="content1-3p">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-2">hdiutil detach "/Volumes/Mac OS X Install ESD"</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCPwIvdHE9" id="content1-3s">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">Enter the command below to rename the cloned volume <em>“Mac OS X Install ESD 1”</em>&nbsp;to <em>“Install OS X Lion”</em>.</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCPuGprfK8" id="content1-3q">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-2">diskutil rename "/Volumes/Mac OS X Install ESD 1" "Install OS X Lion"</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCPwJit3FG" id="content1-3u">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7"><p><span style="font-size: 1rem;">If needed, enter the command below to unmount the cloned volume <em>“Install OS X Lion”</em> and then eject the device containing this volume. For example, if you need to remove a USB flash drive containing this volume.</span><br></p></div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCPuGzvWVf" id="content1-3r">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-2">diskutil eject "/Volumes/Install OS X Lion"</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section content4 cid-tCQbTZmp5o" id="content4-3y">
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="title col-12 col-md-8">
+                
+                <h3 class="mbr-section-subtitle align-center mbr-light mbr-fonts-style display-5">Bootable Lion from the File Downloaded from Apple</h3>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCQdYO73dH" id="content1-48">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">Enter the command below to attach the <em>“InstallMacOSX.dmg”</em> disk image file as a device. This will automatically mount the volume <em>“Install Mac OS X”</em> stored in this disk image file.</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCQdAv93I0" id="content1-41">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-2">hdiutil attach ~/Downloads/InstallMacOSX.dmg</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCQdZONjsn" id="content1-4b">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">Enter the command below to remove any existing <em>“/tmp/MacOSX”</em> folder.</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCQdBo8OVc" id="content1-43">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-2">rm -rf /tmp/MacOSX</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCQdZpPk8k" id="content1-49">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7"><p>Enter the command below to e<span style="font-size: 1rem;">xpand the Mac OS X Installer flat package file <em>“InstallMacOSX.pkg”</em> into the new folder <em>“/tmp/MacOSX”</em>.</span></p></div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCQdBAyia4" id="content1-45">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-2">pkgutil --expand "/Volumes/Install Mac OS X/InstallMacOSX.pkg" /tmp/MacOSX</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCQe0ifoEX" id="content1-4d">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">Enter the command below to unmount the volume <em>“Install Mac OS X”</em> and then eject the device containing this volume.</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCQdBw2Gy8" id="content1-44">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-2">hdiutil detach "/Volumes/Install Mac OS X"</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCQdZYcbaK" id="content1-4c">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">Enter the command below to attach the <em>“InstallESD.dmg”</em> disk image file as a device. This will automatically mount the volume <em>“Mac OS X Install ESD”</em> stored in this disk image file.</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCQdBFBhKM" id="content1-46">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-2">hdiutil attach /tmp/MacOSX/InstallMacOSX.pkg/InstallESD.dmg</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCQdZDEeTh" id="content1-4a">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">Enter the command below to clone the source volume <em>“Mac OS X Install ESD”</em>. If prompted for a password, type your administrator password. Terminal doesn't show any characters as you type. Then press Return. When prompted to erase contents, type Y to confirm that you want to erase the volume, then press Return. The cloned volume should be named <em>“Mac OS X Install ESD 1”</em>.</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCQdBJvJrG" id="content1-47">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-2">sudo asr restore --source "/Volumes/Mac OS X Install ESD" --target "/Volumes/MyVolume" --erase</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCQfV38X7a" id="content1-4j">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">Enter the command below to unmount the source volume <em>“Mac OS X Install ESD”</em> and then eject the device containing this volume.</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCQfMjanPw" id="content1-4e">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-2">hdiutil detach "/Volumes/Mac OS X Install ESD"</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCQfUECTax" id="content1-4i">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">Enter the command below to remove the <em>“/tmp/MacOSX”</em> folder.</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCQdBbbn3z" id="content1-42">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-2">rm -r /tmp/MacOSX</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCQfVdpH6R" id="content1-4k">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">Enter the command below to rename the cloned volume <em>“Mac OS X Install ESD 1”</em> to <em>“Install OS X Lion”</em>.</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCQfMHNucs" id="content1-4h">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-2">diskutil rename "/Volumes/Mac OS X Install ESD 1" "Install OS X Lion"</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCQfVkp9xy" id="content1-4l">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">If needed, enter the command below to unmount the cloned volume <em>“Install OS X Lion”</em> and then eject the device containing this volume. For example, if you need to remove a USB flash drive containing this volume.</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content1 cid-tCQfMsOEfk" id="content1-4f">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-2">diskutil eject "/Volumes/Install OS X Lion"</div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section content4 cid-tCQc4xLnUm" id="content4-3z">
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="title col-12 col-md-8">
+                
+                <h3 class="mbr-section-subtitle align-center mbr-light mbr-fonts-style display-5">
+                    Bootable from Install .app&nbsp;</h3>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content11 cid-tCNQ3mEz7M" id="content11-3i">
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+                <ol>
+                    <li>Plug in the USB flash drive or other volume that you're using for the bootable installer.</li>
+                    <li>Open Terminal, which is in the <em>“Utilities”</em> folder of the <em>“Applications”</em> folder.</li>
+                    <li>Type or paste one of the ‘Create Bootable Installer’ commands given on the <a href="index.html" style="font-size: 1rem; background-color: rgb(255, 255, 255);">Home</a>&nbsp;page into Terminal, then press Return to enter the command. Each command assumes that the installer is in the <em>“Applications”</em> folder, and <em>“MyVolume”</em> is the name of the USB flash drive or other volume you're using. If the volume has a different name, replace <em>“<span style="font-size: 1rem;">MyVolume”</span></em><span style="font-size: 1rem;"> in the command with the name of your volume.</span></li><li>When prompted, type your administrator password. Terminal doesn't show any characters as you type. Then press Return.</li><li>When prompted, type Y to confirm that you want to erase the volume, then press Return. Terminal shows the progress as the volume is erased.</li><li>After the volume is erased, you may see an alert that Terminal would like to access files on a removable volume. Click OK to allow the copy to proceed.</li><li>When Terminal says that it's done, the volume will have the same name as the installer you downloaded, such as Install macOS Sierra. You can now quit Terminal and optionally eject the volume.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section content8 cid-tCJJCI3r3m" id="content8-38">
+
+    
+
+    <div class="container">
+        <div class="media-container-row title">
+            <div class="col-12 col-md-8">
+                <div class="mbr-section-btn align-center"><a class="btn btn-primary display-4" href="#top">Top of Page</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section content4 cid-tCJHaX9lFm" id="content4-33">
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="title col-12 col-md-8">
+                <h2 class="align-center pb-3 mbr-fonts-style display-4">| <a href="index.html">Home</a> | Make Bootable | <a href="privacypolicy.html">Privacy Policy</a> | <a href="termsofuse.html">Terms of Use</a> |&nbsp;<a href="references.html">References</a> |</h2>
+                <h3 class="mbr-section-subtitle align-center mbr-light mbr-fonts-style display-7">© Copyright 2023 David Anderson - All Rights Reserved</h3>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  
+  
+</body>
+</html>
