@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)file:///C:/Users/david/Documents/mytest/resize/New%20folder/BootableElCapitan.html -->
+<html itemscope="" itemtype="https://schema.org/QAPage" class="html__responsive " lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>macos - How do I create El Capitan installer on a Catalina (or post-El Capitan) installed Mac for use on USB boot installer? - Ask Different</title>
+        <link href='https://fonts.googleapis.com/css?family=Red Hat Mono' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Charis SIL' rel='stylesheet'>
+        <!-- link rel="stylesheet" type="text/css" href="./common/stacks.css" -->
+        <link rel="stylesheet" type="text/css" href="./common/primary.css"> 
+        <!-- <link rel="stylesheet" type="text/css" href="./BootableElCapitan_files/channels.css"> -->
+    </head>
+    <body>
+        <div class="answercell post-layout--right">
+<h2>Create Bootable Installer Directly form Downloaded File</h2>
+<p>The following steps can be used to create a USB installer for El Capitan.</p>
+<ol>
+<li><p>If you have not already downloaded then <code>InstallMacOSX.dmg</code> file for El Capitan, then use instructions on the Apple website "<a href="https://support.apple.com/en-us/HT206886" rel="nofollow noreferrer">How to download macOS</a>" to download this file.</p>
+</li>
+<li><p>Use the Disk Utility to erase a 16 GB or larger flash drive. If the Disk Utility window has a <code>View</code> pulldown menu, make sure <code>Show All Devices</code> is selected. Highlight the flash drive, then click on the <code>Erase</code> button. Use the setting shown in the image below.</p>
+<p><a href="./bootableelcapitan/TqqxC.png" rel="nofollow noreferrer"><img src="./bootableelcapitan/TqqxC.png" alt=""></a></p>
+<p>Next, click on the <code>Erase</code> button. When finished erasing, click on the <code>Done</code> button.</p>
+</li>
+<li><p>Use the Finder applicaition to open <code>InstallMacOSX.dmg</code>.</p>
+</li>
+<li><p>Enter the commands given below. A folder named <code>El Capitan</code> will be created in the <code>/tmp</code> folder to hold temporary files.</p>
+<blockquote>
+<p>Note: The easiest way to enter the commands is to copy from this document and paste in the Terminal window.</p>
+</blockquote>
+<pre><code>rm -rf /tmp/El\ Capitan
+pkgutil --expand /Volumes/Install\ OS\ X/InstallMacOSX.pkg /tmp/El\ Capitan
+diskutil eject Install\ OS\ X
+cd /tmp/El\ Capitan
+hdiutil attach InstallMacOSX.pkg/InstallESD.dmg  -noverify -nobrowse -mountpoint /Volumes/esd
+sudo asr restore -source /Volumes/esd/BaseSystem.dmg -target /Volumes/MyVolume -noprompt -noverify -erase
+</code></pre>
+<p>&nbsp;<br>
+After entering the last command given above, you may get a message similar to the one given below.</p>
+<pre><code>asr: Couldn't personalize volume /Volumes/OS X Base System
+</code></pre>
+<p>&nbsp;<br>
+Some versions of macOS will produce this message while other versions do not. I suspect this is an fatal message because an exit status of 1 was returned.</p>
+<blockquote>
+<p><em>Inspection has determined that the part of the command that failed is unimportant.</em></p>
+</blockquote>
+<p>Therefore, I was able to ignore this error. However, the error can also be avoided by applying the following steps given in the section below titled <strong>Alternative to Using the <code>asr</code> Command</strong>.</p>
+</li>
+<li><p>To finish creating the bootable USB flash drive El Capitan installer, enter the commands given below.</p>
+<pre><code>diskutil rename OS\ X\ Base\ System Install\ El\ Capitan
+rm /Volumes/Install\ El\ Capitan/System/Installation/Packages
+cp -rp /Volumes/esd/Packages /Volumes/Install\ El\ Capitan/System/Installation
+cp -rp /Volumes/esd/BaseSystem.chunklist /Volumes/Install\ El\ Capitan/
+cp -rp /Volumes/esd/BaseSystem.dmg /Volumes/Install\ El\ Capitan/
+hdiutil detach /Volumes/esd
+sudo bless --folder /Volumes/Install\ El\ Capitan/System/Library/CoreServices --label Install\ El\ Capitan
+cp /Volumes/Install\ El\ Capitan/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/InstallAssistant.icns /Volumes/Install\ El\ Capitan/.VolumeIcon.icns
+cd "$HOME"
+rm -r /tmp/El\ Capitan
+diskutil eject Install\ El\ Capitan
+</code></pre>
+</li>
+<li><p>Remove the flash drive. You are done.</p>
+</li>
+</ol>
+<hr>
+<h2>Alternative to Using the <code>asr</code> Command</h2>
+<p>The command given below may generate a error message and/or hang depending on the version of macOS and perhaps the model Mac you are using.</p>
+<pre><code>sudo asr restore -source /Volumes/esd/BaseSystem.dmg -target /Volumes/MyVolume -noprompt -noverify -erase
+</code></pre>
+<p>You can avoid entering the above command by following the steps given below.</p>
+<ol>
+<li><p>If the volume on the USB flash drive is no longer labeled <code>MyVolume</code>, then use the Disk Utility to erase the flash drive. Highlight the flash drive, then click on the <code>Erase</code> button. Use the setting shown in the image below.</p>
+<p><a href="./bootableelcapitan/TqqxC.png" rel="nofollow noreferrer"><img src="./bootableelcapitan/TqqxC.png" alt=""></a></p>
+<p>Next, click on the <code>Erase</code> button. When finished erasing, click on the <code>Done</code> button.</p>
+</li>
+<li><p>Enter the following command to create a sparse flash drive image.</p>
+<pre><code>hdiutil create -type SPARSE -size 10g -layout MBRSPUD -fs HFS+J -volname MyImage -attach /tmp/El\ Capitan/MyImage
+</code></pre>
+<p>&nbsp;</p>
+</li>
+<li><p>Basically, you want to restore to volume <code>MyImage</code> from the hidden file <code>BaseSystem.dmg</code>. The hidden file <code>BaseSystem.dmg</code> is shown in the Finder window image shown below. The drive <code>OS X Install ESD</code> can be found in the hidden volume <code>Volumes</code> in the root folder.</p>
+<blockquote>
+<p>There are various ways to view hidden files. These ways depend on the version of OS X or macOS you are using. You may have to search the web for a way that works for you.</p>
+</blockquote>
+<p><a href="./bootableelcapitan/eyVGc.png" rel="nofollow noreferrer"><img src="./bootableelcapitan/eyVGc.png" alt=""></a></p>
+<p>Highlight the <code>MyImage</code> volume shown in the Disk Utility main window. Click on the <code>Restore</code> button, then the <code>Image</code> button. Select the <code>BaseSystem.dmg</code> file, as shown below. Next, click on the <code>Restore</code> button.</p>
+<p><a href="./bootableelcapitan/03I5c.png" rel="nofollow noreferrer"><img src="./bootableelcapitan/03I5c.png" alt=""></a></p>
+<p>After a successful restore, you should see the image shown below. You can click on the <code>Done</code> button and quit the Disk Utility.</p>
+<p><a href="./bootableelcapitan/F5cRH.png" rel="nofollow noreferrer"><img src="./bootableelcapitan/F5cRH.png" alt=""></a></p>
+<p>Also, you should get the following popup.</p>
+<p><a href="./bootableelcapitan/f214T.png" rel="nofollow noreferrer"><img src="./bootableelcapitan/f214T.png" alt=""></a></p>
+</li>
+<li><p>Enter the following commands to clone to the flash drive.</p>
+<blockquote>
+<p>Note: The <code>dd</code> command takes a long time to complete. See this <a href="https://apple.stackexchange.com/questions/234167/how-can-i-track-progress-of-dd/234208#234208">answer</a> to track the progress of the <code>dd</code> command. The bytes to be transferred is approximately 10 GB.</p>
+</blockquote>
+<pre><code>getdsk() { local "x=$(diskutil info "$2" | grep Part\ of\ Whole)"; eval $1'="/dev/r${x##* }"'; }
+getdsk DSK1 OS\ X\ Base\ System
+getdsk DSK2 MyVolume
+diskutil unmountdisk $DSK1
+diskutil unmountdisk $DSK2
+sudo dd if=$DSK1 of=$DSK2 bs=1m
+diskutil eject $DSK1
+diskutil unmountdisk $DSK2
+diskutil mountdisk $DSK2
+</code></pre>
+<p>&nbsp;</p>
+<blockquote>
+<p>Note: Since the original will be immediately ejected and eventually deleted, I did not bother to use the <code>hfs.util</code> command to change the UUID of the clone.</p>
+</blockquote>
+</li>
+</ol>
+<p>You can now proceed with the rest of the steps.</p>
+        </div>
+    
+</body></html>
