@@ -2522,6 +2522,22 @@ body {
 .cid-tDbItUdeCQ H3 {
   text-align: center;
 }
+.cid-tDFkfrpiZh {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #ffffff;
+}
+.cid-tDFkfrpiZh .mbr-text,
+.cid-tDFkfrpiZh blockquote {
+  color: #767676;
+}
+.cid-tDFkfrpiZh .mbr-text B {
+  color: #55b4d4;
+}
+.cid-tDFkfrpiZh .mbr-text {
+  text-align: center;
+  color: #55b4d4;
+}
 .cid-tCJ22XoBpe {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -2635,6 +2651,22 @@ body {
 .cid-tD1ycadUVX .mbr-section-subtitle {
   color: #767676;
 }
+.cid-tDFkO3aWmF {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #ffffff;
+}
+.cid-tDFkO3aWmF .mbr-text,
+.cid-tDFkO3aWmF blockquote {
+  color: #767676;
+}
+.cid-tDFkO3aWmF .mbr-text B {
+  color: #55b4d4;
+}
+.cid-tDFkO3aWmF .mbr-text {
+  text-align: center;
+  color: #55b4d4;
+}
 .cid-tD1AcazQtK {
   padding-top: 0px;
   padding-bottom: 15px;
@@ -2647,16 +2679,21 @@ body {
 .cid-tD1AcazQtK .mbr-text {
   color: #232323;
 }
-.cid-tD1BCtr6M1 {
+.cid-tDFlHFaX39 {
   padding-top: 0px;
   padding-bottom: 15px;
   background-color: #ffffff;
 }
-.cid-tD1BCtr6M1 .mbr-text,
-.cid-tD1BCtr6M1 blockquote {
+.cid-tDFlHFaX39 .counter-container {
   color: #767676;
 }
-.cid-tD1BCtr6M1 .mbr-text P {
+.cid-tDFlHFaX39 .counter-container ul {
+  margin-bottom: 0;
+}
+.cid-tDFlHFaX39 .counter-container ul li {
+  margin-bottom: 1rem;
+}
+.cid-tDFlHFaX39 .mbr-text UL {
   color: #232323;
 }
 .cid-tCQaI1WqMm {
@@ -3111,7 +3148,7 @@ body {
   color: #232323;
 }
 .cid-tCNQ3mEz7M {
-  padding-top: 30px;
+  padding-top: 0px;
   padding-bottom: 0px;
   background-color: #ffffff;
 }
@@ -3158,6 +3195,32 @@ body {
   color: #767676;
 }
 .cid-tDBVsGL8mG .mbr-text {
+  color: #232323;
+}
+.cid-tDFnw8dOKE {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #ffffff;
+}
+.cid-tDFnw8dOKE .counter-container {
+  color: #767676;
+}
+.cid-tDFnw8dOKE .counter-container ul {
+  margin-bottom: 0;
+}
+.cid-tDFnw8dOKE .counter-container ul li {
+  margin-bottom: 1rem;
+}
+.cid-tDFv7oaNrA {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #ffffff;
+}
+.cid-tDFv7oaNrA .mbr-text,
+.cid-tDFv7oaNrA blockquote {
+  color: #767676;
+}
+.cid-tDFv7oaNrA .mbr-text {
   color: #232323;
 }
 .cid-tDd1ATzYA9 {

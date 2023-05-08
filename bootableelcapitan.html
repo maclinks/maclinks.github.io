@@ -13,31 +13,11 @@
     </head>
     <script type="text/javascript">
         window.onload = function(){
-            document.getElementById('output').innerHTML = document.referrer; //document.referrer;
-         };
+            // alert("head");
+        };
     </script>
-
     <body>
-
- You visited this page from: <span id="last-page"></span>
-<script type="text/javascript">
-alert("body");
-
-const lastPage = document.getElementById('last-page');
-lastPage.textContent = document.referrer;
-</script>
-
-
- <p>update 1</p>
- <p><a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_doc_referrer">w3schools</a></p>
- <p><a href="http://maclinks.publicvm.com/bootableelcapitan.html">myself</a></p>
-
-<div>
-<p>Hi There</p>
-<p id="output"></p>
-</div>
-
-        <div class="answercell post-layout--right">
+<div class="answercell post-layout--right">
 <h2>Create Bootable Installer Directly from Downloaded File</h2>
 <p>The following steps can be used to create a USB installer for El Capitan.</p>
 <ol>
@@ -137,6 +117,5 @@ diskutil mountdisk $DSK2
 </li>
 </ol>
 <p>You can now proceed with the rest of the steps.</p>
-        </div>
-    
+</div>
 </body></html>
