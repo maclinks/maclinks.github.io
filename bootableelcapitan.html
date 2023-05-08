@@ -13,14 +13,22 @@
     </head>
     <script type="text/javascript">
         window.onload = function(){
-            document.getElementById('output').innerHTML = "Dave" //document.referrer;
+            document.getElementById('output').innerHTML = document.referrer; //document.referrer;
          };
     </script>
 
     <body>
 
  You visited this page from: <span id="last-page"></span>
-    <script src="get-last-page.js"></script>
+<script type="text/javascript">
+alert("body");
+
+const lastPage = document.getElementById('last-page');
+lastPage.textContent = document.referrer;
+</script>
+
+
+ <p>update 1</p>
  <p><a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_doc_referrer">w3schools</a></p>
  <p><a href="http://maclinks.publicvm.com/bootableelcapitan.html">myself</a></p>
 
