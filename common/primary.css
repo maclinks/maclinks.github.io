@@ -1,11 +1,14 @@
 
-/* body and :root were addded. */
+/* body, .answercell, .post-layout--right and :root were addded. */
 
 body {
     font-family: 'Charis SIL';
     font-size: 12pt; /* var(--fs-body1); */
 }
-
+.answercell {
+}
+.post-layout--right {
+}
 /*
 :root {
     --ff-mono: 'Red Hat Mono';
