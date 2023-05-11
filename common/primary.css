@@ -1,9 +1,20 @@
 
-/* body, .answercell, .post-layout--right and :root were addded. */
+/* he following were added. */
 
 body {
     font-family: 'Charis SIL';
     font-size: 12pt; /* var(--fs-body1); */
+}
+a {
+    color: deepskyblue;
+    text-decoration: none;
+}
+.footer {
+    padding-top: 12px;
+    padding-bottom: 6px;
+    text-align:center;
+    background-color:black;
+    color:white;
 }
 .answercell {
 }
@@ -20,6 +31,11 @@ body {
     --su12: 12px;
     --su16: 16px;
     --fs-body1: 10pt;
+}
+
+/* The following were modified. */
+
+@media (prefers-color-scheme:dark)prefers-color-scheme:darpt;
 }
 
 @media (prefers-color-scheme:dark) {

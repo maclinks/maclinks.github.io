@@ -12,8 +12,15 @@
 
     </head>
     <script type="text/javascript">
-        window.onload = function(){
-            // alert("head");
+        /*
+        window.onload = function () {
+            alert("head" + xyz);
+        };
+        */
+        function goto(name) {
+            let position = document.URL.lastIndexOf("/") + 1;
+            let target = document.URL.substring(0, position) + name + ".html";
+            window.location.href = target;
         };
     </script>
     <body>
@@ -32,7 +39,7 @@ DNS Powered by <font color="#006699"><a href="http://www.dnsExit.com">DNS</a></f
 <p><a href="./bootableelcapitan/TqqxC.png" rel="nofollow noreferrer"><img src="./bootableelcapitan/TqqxC.png" alt=""></a></p>
 <p>Next, click on the <code>Erase</code> button. When finished erasing, click on the <code>Done</code> button.</p>
 </li>
-<li><p>Use the Finder applicaition to open <code>InstallMacOSX.dmg</code>.</p>
+<li><p>Use the Finder application to open <code>InstallMacOSX.dmg</code>.</p>
 </li>
 <li><p>Enter the commands given below. A folder named <code>El Capitan</code> will be created in the <code>/tmp</code> folder to hold temporary files.</p>
 <blockquote>
@@ -122,5 +129,9 @@ diskutil mountdisk $DSK2
 </li>
 </ol>
 <p>You can now proceed with the rest of the steps.</p>
+</div>
+<div  class="footer">
+    <p>| <a href="javascript:goto('index')">Home</a> | <a href="javascript:goto('makebootable')">Make Bootable</a> | <a href="javascript:goto('references')">References</a> |</p>
+    <p>| <a href="javascript:goto('privacypolicy')">Privacy Policy</a> | <a href="javascript:goto('termsofuse')">Terms of Use</a> | <a href="javascript:goto('contactme')">Contact Me</a> |</p>
 </div>
 </body></html>
