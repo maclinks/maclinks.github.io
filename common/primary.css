@@ -9,14 +9,20 @@ a {
     color: deepskyblue;
     text-decoration: none;
 }
-.footer {
+.header-footer {
+    font-family: 'Rubik', sans-serif;
     padding-top: 12px;
     padding-bottom: 6px;
     text-align:center;
     background-color:black;
     color:white;
 }
+.header {
+}
+.footer {
+}
 .answercell {
+    margin-top: 20px;
 }
 .post-layout--right {
 }
