@@ -16,11 +16,11 @@
     <script type="text/javascript">
         window.onload = function () {
             /* alert("head" + xyz); */
-            var protocal="https"
+            var scheme="https"
             if (document.URL.substring(0, 4) == "http") {
-                protocal="http"
+                scheme="http"
             }
-            document.getElementById("dnsexit").setAttribute("href",protocal+"://dnsexit.com");
+            document.getElementById("dnsexit").setAttribute("href",scheme+"://dnsexit.com");
         };
         function goto(name) {
             var position = document.URL.lastIndexOf("/") + 1;
