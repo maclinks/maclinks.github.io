@@ -1,7 +1,8 @@
 
-/* he following were added. */
+/* The following were added. */
 
 body {
+margin: 0px;
     font-family: 'Charis SIL';
     font-size: 12pt; /* var(--fs-body1); */
 }
@@ -11,8 +12,8 @@ a {
 }
 .header-footer {
     font-family: 'Rubik', sans-serif;
-    padding-top: 12px;
-    padding-bottom: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     text-align:center;
     background-color:black;
     color:white;
@@ -23,6 +24,9 @@ a {
 }
 .answercell {
     margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
 }
 .post-layout--right {
 }

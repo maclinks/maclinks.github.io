@@ -1,7 +1,7 @@
 #!/bin/bash
 
 Replace() {
-  sed -i .bak "s/${1//\\/\\\\}/${2//\\/\\\\}/g" "$filename"
+  sed -i '' "s/${1//\\/\\\\}/${2//\\/\\\\}/g" "$filename"
 }
 
 bootableyosemite.html() {
