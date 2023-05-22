@@ -10,6 +10,13 @@ a {
     color: deepskyblue;
     text-decoration: none;
 }
+img {
+    padding: 0;
+    display: block;
+/*  margin: 0 auto; <- centers image */
+    max-height: 100%;
+    max-width: 100%;
+}
 .header-footer {
     font-family: 'Rubik', sans-serif;
     padding-top: 2px;
