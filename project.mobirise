@@ -1,6 +1,6 @@
 {
   "settings": {
-    "name": "MacLinks-clone",
+    "name": "maclinks",
     "currentPage": "index.html",
     "theme": {
       "name": "mobirise4",
@@ -36,7 +36,9 @@
     "uniqCompNum": 291,
     "versionPublish": "4.7.2",
     "path": "@PROJECT_PATH@",
-    "screenshot": "screenshot.png"
+    "screenshot": "screenshot.png",
+    "favicon": "",
+    "noImageResize": ""
   },
   "pages": {
     "index.html": {
@@ -179,7 +181,7 @@
             }
           },
           "_name": "content1",
-          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article><p><span style=\"font-size: 1rem;\">Below are links that open the App Store page for that macOS. In the App Store, click the Get button to begin downloading the macOS installer. After downloading to your Applications folder, the installer opens automatically. Follow the onscreen instructions to install macOS. <b><i>Note: The abilty to download each macOS installer does depend on the current OS X/macOS you are using.</i></b></span></p></div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article><p><span style=\"font-size: 1rem;\">Below are links that open the App Store page for that macOS. In the App Store, click the Get button to begin downloading the macOS installer. After downloading to your Applications folder, the installer opens automatically. Follow the onscreen instructions to install macOS. <b><i>Note: The abilty to download each macOS installer does depend on the current OS X/macOS you are using.</i></b></span></p></div>\n        </div>\n    </div>\n</section>",
           "_anchor": "content1-82",
           "_isUserblock": true,
           "_sourceTheme": "mobirise4",
@@ -225,7 +227,7 @@
             }
           },
           "_name": "content1",
-          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article><p>Apple offers many webpages which give instructions and/or download links that are not accessable using the versions of Safari available to older OS X releases. Some of these webpages are listed on the&nbsp;<a href=\"references.html\">References</a> page. This website is offered in both legacy HTTP and secure HTTPS forms. The HTTP form should work with the Safari versions from the initial OS X Snow Leopard 10.6 DVD release through at least Safari versions included with macOS Sierra 10.12.6 releases. From a security standpoint, the HTTPS form should be used when practical. When the HTTP form is used, the content may be verified by comparing with machine which can view the HTTPS form.</p><p>\n            </p></div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article><p>Apple offers many webpages which give instructions and/or download links that are not accessable using the versions of Safari available to older OS X releases. Some of these webpages are listed on the&nbsp;<a href=\"references.html\">References</a> page. This website is offered in both legacy HTTP and secure HTTPS forms. The HTTP form should work with the Safari versions from the initial OS X Snow Leopard 10.6 DVD release through at least Safari versions included with macOS Sierra 10.12.6 releases. From a security standpoint, the HTTPS form should be used when practical. When the HTTP form is used, the content may be verified by comparing with machine which can view the HTTPS form.</p><p>\n            </p></div>\n        </div>\n    </div>\n</section>",
           "_cid": "ttgkcBfgnn",
           "_anchor": "content1-0",
           "_protectedParams": [],
