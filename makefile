@@ -7,6 +7,9 @@ Replace() {
 bootableyosemite.html() {
   Replace "El Capitan"     "Yosemite"
   Replace "El\ Capitan"    "Yosemite"
+  Replace "bootableelcapitan" "bootableyosemite"
+  Replace "sh7z4.png" "osxinstallesd.png"
+  Replace "f214T.png" "osxbasesystem.png"
 }
 
 bootablesierra.html() {
@@ -14,12 +17,9 @@ bootablesierra.html() {
   Replace "El\ Capitan"    "Sierra"
   Replace "InstallMacOSX"  "InstallOS"
   Replace "Install\ OS\ X" "Install\ macOS"
-
   Replace "bootableelcapitan" "bootablesierra"
   Replace "sh7z4.png" "osxinstallesd.png"
   Replace "f214T.png" "osxbasesystem.png"
-#  Replace "bootableelcapitan\/F5cRH.png" "bootablesierra\/osxinstallesd.png"
-#  Replace "bootableelcapitan\/f214T.png" "bootablesierra\/osxbasesystem.png"
 }
 
 DoHTML() {
