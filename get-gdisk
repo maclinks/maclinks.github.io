@@ -1,0 +1,14 @@
+#!/bin/bash
+set +v -ex
+set +v -ex
+GDISK="/tmp/gdisk.files"
+trap 'rm -rf "$GDISK" /tmp/gdisk; set +xv; echo "*** Failed! ***"' ERR
+rm -rf "$GDISK" /tmp/gdisk;
+mkdir "$GDISK"
+curl -L -o "$GDISK/gdisk.pkg" https://sourceforge.net/projects/gptfdisk/files/gptfdisk/1.0.9/gdisk-binaries/gdisk-1.0.9.pkg
+pkgutil --expand "$GDISK/gdisk.pkg" "$GDISK/gdisk"
+tar -C "$GDISK" -xvf "$GDISK/gdisk/Payload" ./usr/local/bin/gdisk
+mv "$GDISK/usr/local/bin/gdisk" /tmp
+rm -rf "$GDISK"
+set +xv
+echo "*** Success! ***"
